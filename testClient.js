@@ -1,8 +1,8 @@
 const { io } = require("socket.io-client");
 
-const socket = io("http://localhost:3000"); // Change to your server's address
+const socket = io("http://localhost:3000");
 
-const userId = "67cfea9aa23e3c03590d9f12"; // Replace with actual user ID from authentication
+const userId = "67cfea9aa23e3c03590d9f12";
 
 socket.on("connect", () => {
   console.log("Connected to WebSocket server:", socket.id);
