@@ -12,12 +12,12 @@ const placeTrade = async (req, res) => {
       return res.status(400).json({ message: "Missing required fields" });
     }
 
-    // Create new trade with correctly named fields
+    // Create new trade with fields
     const trade = new Trade({
-      event: eventId, // Correct field name
+      event: eventId,
       amount,
-      choice: prediction, // Rename prediction to choice
-      user: req.user.id, // Assuming user is authenticated
+      choice: prediction,
+      user: req.user.id,
     });
 
     await trade.save();
@@ -42,9 +42,9 @@ const getTrades = async (req, res) => {
     // Format response
     const formattedTrades = trades.map((trade) => ({
       _id: trade._id,
-      eventId: trade.event ? trade.event._id : null, // Ensure event ID is present
+      eventId: trade.event ? trade.event._id : null,
       amount: trade.amount,
-      prediction: trade.choice, // Rename choice to prediction
+      prediction: trade.choice,
       status: trade.status,
     }));
 
@@ -112,7 +112,7 @@ const settleTrades = async (req, res) => {
 
     // Get the io instance
     const io = req.app.get("io");
-    const userSockets = req.app.get("userSockets"); // Get the userSockets Map
+    const userSockets = req.app.get("userSockets");
 
     const settledTrades = [];
 

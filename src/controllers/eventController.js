@@ -24,7 +24,7 @@ const createEvent = async (req, res) => {
   try {
     const event = new Event({
       ...req.body,
-      status: "open", // Add status as 'open' for trading
+      status: "open",
     });
     await event.save();
     res.status(201).json({ message: "Event Created Successfully" });
@@ -54,7 +54,7 @@ const deleteEvent = async (req, res) => {
       return res.status(400).json({ message: "Cannot delete a closed event" });
     }
 
-    // Optionally, you might want to ensure there are no active trades before deletion
+    // Optionally, we might want to ensure there are no active trades before deletion
     // Example: Check if there are any trades placed for this event
     const activeTrades = await Trade.find({
       eventId: event._id,
@@ -83,11 +83,11 @@ const fetchAndStoreEvents = async (req, res) => {
 
     // Transform data to match Mongoose schema
     const formattedEvents = oddsData.map((event) => ({
-      name: `${event.home_team} vs ${event.away_team}`, // Combine teams into name
-      sport: event.sport_key, // Use correct schema field
-      category: event.sport_title, // Map category
-      startTime: new Date(event.commence_time), // Convert to Date object
-      status: "upcoming", // Default status
+      name: `${event.home_team} vs ${event.away_team}`,
+      sport: event.sport_key,
+      category: event.sport_title,
+      startTime: new Date(event.commence_time),
+      status: "upcoming",
       oddsData: event.odds,
     }));
 
