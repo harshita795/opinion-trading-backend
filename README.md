@@ -26,7 +26,7 @@ The **Opinion Trading Backend** is a backend service built with **Node.js, Expre
 1. Clone the repository:
    ```sh
    git clone https://github.com/harshita795/opinion-trading-backend.git
-   cd trade-management-system
+   cd opinion-trading-backend
    ```
 2. Install dependencies:
    ```sh
