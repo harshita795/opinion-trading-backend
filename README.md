@@ -25,7 +25,7 @@ The **Opinion Trading Backend** is a backend service built with **Node.js, Expre
 ## Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/trade-management-system.git
+   git clone https://github.com/harshita795/opinion-trading-backend.git
    cd trade-management-system
    ```
 2. Install dependencies:
@@ -198,12 +198,16 @@ POST /api/trades/settle
 }
 ```
 
-## Technologies Used
-- **Node.js & Express.js** - Backend framework
-- **MongoDB & Mongoose** - Database and ORM
-- **JWT Authentication** - Secure authentication
-- **WebSockets (Socket.io)** - Real-time updates
-- **Dotenv** - Environment variables management
+## Technology Stack
+
+| Technology | Purpose |
+| --- | --- |
+| **Node.js** | Backend framework |
+| **Express.js** | API handling |
+| **MongoDB & Mongoose** | Database & ORM |
+| **Socket.io** | WebSocket real-time communication |
+| **JWT (JSON Web Token)** | Authentication |
+| **Bcrypt.js** | Password hashing |
 
 ## WebSocket Events
 | Event | Description |
