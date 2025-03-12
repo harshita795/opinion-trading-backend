@@ -1,7 +1,7 @@
-# Trade Management System
+# Opinion Trading Backend
 
 ## Introduction
-The **Trade Management System** is a backend service built with **Node.js, Express.js, and MongoDB**, designed to facilitate event-based trading. Users can place trades on specific events, update or cancel trades, and receive real-time updates via WebSocket. Admins can settle trades based on event outcomes, affecting users' balances accordingly.
+The **Opinion Trading Backend** is a backend service built with **Node.js, Express.js, and MongoDB**, designed to facilitate event-based trading. Users can place trades on specific events, update or cancel trades, and receive real-time updates via WebSocket. Admins can settle trades based on event outcomes, affecting users' balances accordingly.
 
 ## Features
 - **User Authentication:** Secure login and user verification.
