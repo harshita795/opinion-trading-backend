@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
-const http = require("http"); // Required for WebSocket server
+const http = require("http");
 const { Server } = require("socket.io");
 
 const {
