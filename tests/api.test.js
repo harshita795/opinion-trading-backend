@@ -1,5 +1,5 @@
 const request = require("supertest");
-const { app, server, interval } = require("../src/server.js"); // Ensure this points to
+const { app, server, interval } = require("../src/server.js");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
